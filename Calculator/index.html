@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculator UI</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 flex items-center justify-center min-h-screen">
+
+  <div class="bg-gray-800 p-6 rounded-xl shadow-lg w-80">
+    <!-- Display -->
+    <input 
+      type="text" 
+      id="display" 
+      class="w-full text-right text-2xl p-3 rounded-md bg-gray-100 mb-4 outline-none" 
+      placeholder="0"
+      
+    />
+
+    <!-- Buttons Grid -->
+    <div class="grid grid-cols-4 gap-3">
+      <button class="bg-red-500 text-white py-3 rounded hover:bg-red-600">C</button>
+      <button class="bg-gray-700 text-white py-3 rounded hover:bg-gray-600">/</button>
+      <button class="bg-gray-700 text-white py-3 rounded hover:bg-gray-600">*</button>
+      <button class="bg-gray-700 text-white py-3 rounded hover:bg-gray-600">-</button>
+
+      <button class="bg-gray-600 text-white py-3 rounded hover:bg-gray-500">7</button>
+      <button class="bg-gray-600 text-white py-3 rounded hover:bg-gray-500">8</button>
+      <button class="bg-gray-600 text-white py-3 rounded hover:bg-gray-500">9</button>
+      <button class="bg-gray-700 text-white py-3 rounded hover:bg-gray-600">+</button>
+
+      <button class="bg-gray-600 text-white py-3 rounded hover:bg-gray-500">4</button>
+      <button class="bg-gray-600 text-white py-3 rounded hover:bg-gray-500">5</button>
+      <button class="bg-gray-600 text-white py-3 rounded hover:bg-gray-500">6</button>
+      <button class="col-span-1 invisible"></button>
+
+      <button class="bg-gray-600 text-white py-3 rounded hover:bg-gray-500">1</button>
+      <button class="bg-gray-600 text-white py-3 rounded hover:bg-gray-500">2</button>
+      <button class="bg-gray-600 text-white py-3 rounded hover:bg-gray-500">3</button>
+      <button class="row-span-2 bg-blue-500 text-white py-3 rounded hover:bg-blue-600">=</button>
+
+      <button class="col-span-2 bg-gray-600 text-white py-3 rounded hover:bg-gray-500">0</button>
+      <button class="bg-gray-600 text-white py-3 rounded hover:bg-gray-500">.</button>
+    </div>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
