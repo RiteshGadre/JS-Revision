@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<body class="bg-gradient-to-br from-blue-400 to-indigo-700 min-h-screen flex items-center justify-center">
+    <div class="bg-white bg-opacity-90 rounded-2xl shadow-2xl p-8 max-w-md w-full">
+        <div class="flex flex-col items-center">
+            <h1 class="text-3xl font-bold mb-4 text-gray-800">Weather App</h1>
+            <form id="weatherForm" class="w-full flex mb-6">
+                <input type="text" id="cityInput" placeholder="Enter city name" class="flex-1 px-4 py-2 rounded-l-lg border border-gray-300 focus:outline-none" />
+                <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-r-lg font-semibold">Search</button>
+            </form>
+            <div id="weatherResult" class="w-full text-center">
+                <!-- Weather info will appear here -->
+                <div class="hidden" id="loading">
+                    <svg class="animate-spin h-8 w-8 text-blue-500 mx-auto mb-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z"></path>
+                    </svg>
+                    <span class="text-gray-600">Loading...</span>
+                </div>
+                <div id="weatherData" class="hidden">
+                    <img id="weatherIcon" class="mx-auto mb-2 w-20 h-20" src="" alt="Weather Icon" />
+                    <div class="text-2xl font-semibold" id="temperature"></div>
+                    <div class="text-lg text-gray-700" id="description"></div>
+                    <div class="mt-2 text-gray-500" id="location"></div>
+                    <div class="mt-4 flex justify-center gap-6">
+                        <div>
+                            <span class="font-semibold" id="humidity"></span>
+                            <span class="text-xs text-gray-500 block">Humidity</span>
+                        </div>
+                        <div>
+                            <span class="font-semibold" id="wind"></span>
+                            <span class="text-xs text-gray-500 block">Wind</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="error" class="hidden text-red-500 mt-4"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- JavaScript -->
+    <script src="./app.js"></script>
+</body>
+    
+</body>
+</html>
